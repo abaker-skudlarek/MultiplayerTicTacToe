@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddka1ehg4xqo8"]
+
+[ext_resource type="Script" path="res://Scenes/GridPosition/grid_position.gd" id="1_u70ad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8p2a1"]
+size = Vector2(200, 200)
+
+[node name="GridPosition" type="Area2D"]
+script = ExtResource("1_u70ad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_8p2a1")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

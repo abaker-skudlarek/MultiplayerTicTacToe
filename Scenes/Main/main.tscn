@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://dek82gxmo48oh"]
+
+[ext_resource type="PackedScene" uid="uid://dur07llej4wg4" path="res://Scenes/GridLine/grid_line.tscn" id="1_w7eti"]
+[ext_resource type="PackedScene" uid="uid://ddka1ehg4xqo8" path="res://Scenes/GridPosition/grid_position.tscn" id="2_epr14"]
+
+[node name="Main" type="Node"]
+
+[node name="Background" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.339072, 0.336751, 0.632386, 1)
+
+[node name="Grid" type="Node" parent="."]
+
+[node name="GridLine" parent="Grid" instance=ExtResource("1_w7eti")]
+position = Vector2(251, 60)
+
+[node name="GridLine2" parent="Grid" instance=ExtResource("1_w7eti")]
+position = Vector2(461, 60)
+
+[node name="GridLine3" parent="Grid" instance=ExtResource("1_w7eti")]
+position = Vector2(660, 251)
+rotation = 1.5708
+
+[node name="GridLine4" parent="Grid" instance=ExtResource("1_w7eti")]
+position = Vector2(660, 461)
+rotation = 1.5708
+
+[node name="GridPosition_0_0" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(150, 572)
+
+[node name="GridPosition_0_1" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(150, 361)
+y = 1
+
+[node name="GridPosition_0_2" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(150, 151)
+y = 2
+
+[node name="GridPosition_1_0" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(361, 572)
+x = 1
+
+[node name="GridPosition_1_1" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(361, 361)
+x = 1
+y = 1
+
+[node name="GridPosition_1_2" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(361, 151)
+x = 1
+y = 2
+
+[node name="GridPosition_2_0" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(572, 572)
+x = 2
+
+[node name="GridPosition_2_1" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(572, 361)
+x = 2
+y = 1
+
+[node name="GridPosition_2_2" parent="Grid" instance=ExtResource("2_epr14")]
+position = Vector2(572, 151)
+x = 2
+y = 2

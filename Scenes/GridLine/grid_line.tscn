@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://dur07llej4wg4"]
+
+[node name="GridLine" type="Polygon2D"]
+polygon = PackedVector2Array(0, 0, 10, 0, 10, 600, 0, 600, 0, 0)
