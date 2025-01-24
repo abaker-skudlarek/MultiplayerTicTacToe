@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dek82gxmo48oh"]
+[gd_scene load_steps=4 format=3 uid="uid://dek82gxmo48oh"]
 
+[ext_resource type="Script" path="res://Scenes/Main/multiplayer_buttons.gd" id="1_5xmv3"]
 [ext_resource type="PackedScene" uid="uid://dur07llej4wg4" path="res://Scenes/GridLine/grid_line.tscn" id="1_w7eti"]
 [ext_resource type="PackedScene" uid="uid://ddka1ehg4xqo8" path="res://Scenes/GridPosition/grid_position.tscn" id="2_epr14"]
 
@@ -13,6 +14,22 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.71308, 0.664757, 0.634946, 1)
+
+[node name="MultiplayerButtons" type="VBoxContainer" parent="."]
+offset_right = 109.0
+offset_bottom = 66.0
+script = ExtResource("1_5xmv3")
+
+[node name="CreateGame" type="Button" parent="MultiplayerButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Create Game"
+
+[node name="JoinGame" type="Button" parent="MultiplayerButtons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "JoinGame
+"
 
 [node name="Grid" type="Node" parent="."]
 
@@ -68,3 +85,6 @@ y = 1
 position = Vector2(570, 150)
 x = 2
 y = 2
+
+[connection signal="pressed" from="MultiplayerButtons/CreateGame" to="MultiplayerButtons" method="_on_create_game_pressed"]
+[connection signal="pressed" from="MultiplayerButtons/JoinGame" to="MultiplayerButtons" method="_on_join_game_pressed"]
