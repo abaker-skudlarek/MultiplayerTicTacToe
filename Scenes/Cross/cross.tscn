@@ -1,5 +1,7 @@
-[gd_scene format=3 uid="uid://cnlh3s28ua7h8"]
+[gd_scene load_steps=2 format=3 uid="uid://cnlh3s28ua7h8"]
 
-[node name="Cross" type="Polygon2D"]
-color = Color(0.253413, 0.596219, 0.338412, 1)
-polygon = PackedVector2Array(8, 0, 0, 8, 64, 80, 0, 152, 8, 160, 80, 96, 152, 160, 160, 152, 96, 80, 160, 8, 152, 0, 80, 64)
+[ext_resource type="Texture2D" uid="uid://bhciuoqpv0aax" path="res://Assets/cross.png" id="1_mc457"]
+
+[node name="Cross" type="Sprite2D"]
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("1_mc457")

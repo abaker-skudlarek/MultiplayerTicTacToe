@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.339072, 0.336751, 0.632386, 1)
+color = Color(0.71308, 0.664757, 0.634946, 1)
 
 [node name="Grid" type="Node" parent="."]
 
@@ -31,40 +31,40 @@ position = Vector2(660, 461)
 rotation = 1.5708
 
 [node name="GridPosition_0_0" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(150, 572)
+position = Vector2(150, 570)
 
 [node name="GridPosition_0_1" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(150, 361)
+position = Vector2(150, 360)
 y = 1
 
 [node name="GridPosition_0_2" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(150, 151)
+position = Vector2(150, 150)
 y = 2
 
 [node name="GridPosition_1_0" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(361, 572)
+position = Vector2(360, 570)
 x = 1
 
 [node name="GridPosition_1_1" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(361, 361)
+position = Vector2(360, 360)
 x = 1
 y = 1
 
 [node name="GridPosition_1_2" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(361, 151)
+position = Vector2(360, 150)
 x = 1
 y = 2
 
 [node name="GridPosition_2_0" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(572, 572)
+position = Vector2(570, 570)
 x = 2
 
 [node name="GridPosition_2_1" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(572, 361)
+position = Vector2(570, 360)
 x = 2
 y = 1
 
 [node name="GridPosition_2_2" parent="Grid" instance=ExtResource("2_epr14")]
-position = Vector2(572, 151)
+position = Vector2(570, 150)
 x = 2
 y = 2
