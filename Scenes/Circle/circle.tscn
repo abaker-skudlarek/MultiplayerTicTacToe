@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://lv2yk5x2ncdl"]
+[gd_scene load_steps=3 format=3 uid="uid://lv2yk5x2ncdl"]
 
 [ext_resource type="Texture2D" uid="uid://ugkk6pebjwcs" path="res://Assets/circle.png" id="1_3sltk"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_33kdq"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Circle" type="Sprite2D"]
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("1_3sltk")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_33kdq")
