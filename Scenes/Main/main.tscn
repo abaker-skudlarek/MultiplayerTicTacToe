@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://dek82gxmo48oh"]
+[gd_scene load_steps=5 format=3 uid="uid://dek82gxmo48oh"]
 
+[ext_resource type="Script" path="res://Scenes/Main/server_id.gd" id="1_2a40b"]
 [ext_resource type="Script" path="res://Scenes/Main/multiplayer_buttons.gd" id="1_5xmv3"]
 [ext_resource type="PackedScene" uid="uid://dur07llej4wg4" path="res://Scenes/GridLine/grid_line.tscn" id="1_w7eti"]
 [ext_resource type="PackedScene" uid="uid://ddka1ehg4xqo8" path="res://Scenes/GridPosition/grid_position.tscn" id="2_epr14"]
 
 [node name="Main" type="Node"]
+
+[node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
+_spawnable_scenes = PackedStringArray("res://Scenes/Cross/cross.tscn", "res://Scenes/Circle/circle.tscn")
+spawn_path = NodePath("..")
 
 [node name="Background" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -14,6 +19,12 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0.71308, 0.664757, 0.634946, 1)
+
+[node name="ServerID" type="Label" parent="."]
+visible = false
+offset_right = 109.0
+offset_bottom = 23.0
+script = ExtResource("1_2a40b")
 
 [node name="MultiplayerButtons" type="VBoxContainer" parent="."]
 offset_right = 109.0

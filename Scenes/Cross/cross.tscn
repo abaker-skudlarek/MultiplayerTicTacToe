@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://cnlh3s28ua7h8"]
+[gd_scene load_steps=3 format=3 uid="uid://cnlh3s28ua7h8"]
 
 [ext_resource type="Texture2D" uid="uid://bhciuoqpv0aax" path="res://Assets/cross.png" id="1_mc457"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_y67tf"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
 
 [node name="Cross" type="Sprite2D"]
 scale = Vector2(0.028, 0.028)
 texture = ExtResource("1_mc457")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_y67tf")
