@@ -1,11 +1,88 @@
-[gd_scene load_steps=5 format=3 uid="uid://dek82gxmo48oh"]
+[gd_scene load_steps=9 format=3 uid="uid://dek82gxmo48oh"]
 
 [ext_resource type="Script" path="res://Scenes/Main/server_id.gd" id="1_2a40b"]
 [ext_resource type="Script" path="res://Scenes/Main/multiplayer_buttons.gd" id="1_5xmv3"]
+[ext_resource type="Script" path="res://Scenes/Main/ui.gd" id="1_e7435"]
 [ext_resource type="PackedScene" uid="uid://dur07llej4wg4" path="res://Scenes/GridLine/grid_line.tscn" id="1_w7eti"]
+[ext_resource type="Texture2D" uid="uid://ugkk6pebjwcs" path="res://Assets/circle.png" id="1_yy6lk"]
 [ext_resource type="PackedScene" uid="uid://ddka1ehg4xqo8" path="res://Scenes/GridPosition/grid_position.tscn" id="2_epr14"]
+[ext_resource type="Texture2D" uid="uid://bhciuoqpv0aax" path="res://Assets/cross.png" id="2_libex"]
+[ext_resource type="Texture2D" uid="uid://tpqbvuwsxeeu" path="res://Assets/white-arrow.png" id="3_p061m"]
 
 [node name="Main" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+script = ExtResource("1_e7435")
+
+[node name="Background" type="ColorRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = -80.0
+offset_right = 80.0
+offset_bottom = 50.0
+color = Color(0, 0, 0, 1)
+
+[node name="CircleImage" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = -45.0
+offset_top = 5.0
+offset_right = 555.0
+offset_bottom = 488.0
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("1_yy6lk")
+
+[node name="CrossImage" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 3.0
+offset_right = 6024.0
+offset_bottom = 6127.0
+scale = Vector2(0.006, 0.006)
+texture = ExtResource("2_libex")
+
+[node name="YouCircleLabel" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = -36.0
+offset_top = 36.0
+offset_right = 4.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 12
+text = "YOU"
+
+[node name="YouCrossLabel" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 15.0
+offset_top = 36.0
+offset_right = 55.0
+offset_bottom = 59.0
+theme_override_font_sizes/font_size = 12
+text = "YOU"
+
+[node name="ArrowCircleImage" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = -45.0
+offset_top = 7.0
+offset_right = 1555.0
+offset_bottom = 1607.0
+rotation = 1.5708
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("3_p061m")
+
+[node name="ArrowCrossImage" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 39.0
+offset_right = 1646.0
+offset_bottom = 1639.0
+rotation = -1.5708
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("3_p061m")
 
 [node name="MultiplayerSpawner" type="MultiplayerSpawner" parent="."]
 _spawnable_scenes = PackedStringArray("res://Scenes/Cross/cross.tscn", "res://Scenes/Circle/circle.tscn")
