@@ -8,7 +8,6 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	SignalBus.connect("game_started", _on_game_started)
 	SignalBus.connect("turn_taken", _on_turn_taken)
 	arrow_circle_image.visible = false
 	arrow_cross_image.visible = false
